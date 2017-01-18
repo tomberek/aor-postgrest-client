@@ -84,11 +84,16 @@ export default (data, loggingEnabled = false) => {
     return (type, resource, params) => {
         const collection = restServer.getCollection(resource);
         if (!collection) {
-            return new Promise((resolve, reject) => reject(new Error(`Undefined collection "${resource}"`)));
+            return new Promise((_, reject) => reject(new Error(`Undefined collection "${resource}"`)));
         }
-        const response = getResponse(type, resource, params);
+        let response;
+        try {
+            response = getResponse(type, resource, params);
+        } catch (error) {
+            return new Promise((_, reject) => reject(error));
+        }
         if (response === false) {
-            return new Promise((resolve, reject) => reject(new Error(`Unsupported fetch action type ${type}`)));
+            return new Promise((_, reject) => reject(new Error(`Unsupported fetch action type ${type}`)));
         }
         if (loggingEnabled) {
             log(type, resource, params, response);
