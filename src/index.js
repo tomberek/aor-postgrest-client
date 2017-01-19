@@ -62,8 +62,16 @@ export default (data, loggingEnabled = false) => {
             return restServer.getOne(resource, params.id, { ...params });
         case GET_MANY:
             return restServer.getAll(resource, { filter: { id: params.ids } });
-        case GET_MANY_REFERENCE:
-            return restServer.getAll(resource, { filter: { [params.target]: params.id } });
+        case GET_MANY_REFERENCE: {
+            const { page, perPage } = params.pagination;
+            const { field, order } = params.sort;
+            const query = {
+                sort: [field, order],
+                range: [(page - 1) * perPage, (page * perPage) - 1],
+                filter: { ...params.filter, [params.target]: params.id },
+            };
+            return restServer.getAll(resource, query);
+        }
         case UPDATE:
             return restServer.updateOne(resource, params.id, { ...params.data });
         case CREATE:
