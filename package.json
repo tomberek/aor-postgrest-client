@@ -1,7 +1,7 @@
 {
-  "name": "aor-json-rest-client",
-  "version": "1.4.0",
-  "description": "A local REST client for admin-on-rest",
+  "name": "aor-postgrest-client",
+  "version": "0.1.0",
+  "description": "A postgrest client for admin-on-rest",
   "main": "lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -14,23 +14,23 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/marmelab/aor-json-rest-client.git"
+    "url": "git+https://github.com/tomberek/aor-postgres-client.git"
   },
   "keywords": [
     "reactjs",
     "react",
     "rest",
-    "fakerest",
+    "postgrest",
     "local"
   ],
-  "author": "François Zaninotto",
+  "author": "Thomas Bereknyei",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/marmelab/aor-json-rest-client/issues"
+    "url": "https://github.com/tomberek/aor-postgres-client/issues"
   },
-  "homepage": "https://github.com/marmelab/aor-json-rest-client#readme",
+  "homepage": "https://github.com/tomberek/aor-postgres-client#readme",
   "dependencies": {
-    "fakerest": "~1.2.1"
+    "admin-on-rest": "^0.7.0"
   },
   "devDependencies": {
     "babel-cli": "^6.18.0",

@@ -1,111 +1,130 @@
-import FakeRest from 'fakerest';
-
-const GET_LIST = 'GET_LIST';
-const GET_ONE = 'GET_ONE';
-const GET_MANY = 'GET_MANY';
-const GET_MANY_REFERENCE = 'GET_MANY_REFERENCE';
-const CREATE = 'CREATE';
-const UPDATE = 'UPDATE';
-const DELETE = 'DELETE';
-
-/* eslint-disable no-console */
-function log(type, resource, params, response) {
-    if (console.group) {
-        // Better logging in Chrome
-        console.groupCollapsed(type, resource, JSON.stringify(params));
-        console.log(response);
-        console.groupEnd();
-    } else {
-        console.log('FakeRest request ', type, resource, params);
-        console.log('FakeRest response', response);
-    }
-}
+import { queryParameters, fetchJson } from 'admin-on-rest/lib/util/fetch';
+import {
+    GET_LIST,
+    GET_ONE,
+    GET_MANY,
+    GET_MANY_REFERENCE,
+    CREATE,
+    UPDATE,
+    DELETE,
+} from 'admin-on-rest/lib/rest/types';
 
 /**
- * Respond to admin-on-rest REST queries using a local JavaScript object
+ * Maps admin-on-rest queries to a postgrest API
  *
- * Useful for debugging and testing - do not use in production.
- *
+ * The REST dialect is similar to the one of FakeRest
+ * @see https://github.com/marmelab/FakeRest
  * @example
- * import { jsonRestClient } from 'admin-on-rest';
- * const restClient = jsonRestClient({
- *   posts: [
- *     { id: 0, title, 'Hello, world!' },
- *     { id: 1, title, 'FooBar' },
- *   ],
- *   comments: [
- *     { id: 0, post_id: 0, author: 'John Doe', body: 'Sensational!' },
- *     { id: 1, post_id: 0, author: 'Jane Doe', body: 'I agree' },
- *   ],
- * })
+ * GET_MANY_REFERENCE
+ *              => GET http://my.api.url/posts/2
+ * GET_LIST     => GET http://my.api.url/posts?order=title.asc
+ * GET_ONE      => GET http://my.api.url/posts?id=eq.123
+ * GET_MANY     => GET http://my.api.url/posts?id=in.123,456,789
+ * UPDATE       => PATCH http://my.api.url/posts?id=eq.123
+ * CREATE       => POST http://my.api.url/posts
+ * DELETE       => DELETE http://my.api.url/posts?id=eq.123
  */
-export default (data, loggingEnabled = false) => {
-    const restServer = new FakeRest.Server();
-    restServer.init(data);
-
-    function getResponse(type, resource, params) {
-        switch (type) {
-        case GET_LIST: {
-            const { page, perPage } = params.pagination;
-            const { field, order } = params.sort;
-            const query = {
-                sort: [field, order],
-                range: [(page - 1) * perPage, (page * perPage) - 1],
-                filter: params.filter,
-            };
-            return {
-                data: restServer.getAll(resource, query),
-                total: restServer.getCount(resource, { filter: params.filter }),
-            };
-        }
-        case GET_ONE:
-            return restServer.getOne(resource, params.id, { ...params });
-        case GET_MANY:
-            return restServer.getAll(resource, { filter: { id: params.ids } });
-        case GET_MANY_REFERENCE: {
-            const { page, perPage } = params.pagination;
-            const { field, order } = params.sort;
-            const query = {
-                sort: [field, order],
-                range: [(page - 1) * perPage, (page * perPage) - 1],
-                filter: { ...params.filter, [params.target]: params.id },
-            };
-            return restServer.getAll(resource, query);
-        }
-        case UPDATE:
-            return restServer.updateOne(resource, params.id, { ...params.data });
-        case CREATE:
-            return restServer.addOne(resource, { ...params.data });
-        case DELETE:
-            return restServer.removeOne(resource, params.id);
-        default:
-            return false;
-        }
-    }
-
+export default (apiUrl, httpClient = fetchJson) => {
     /**
      * @param {String} type One of the constants appearing at the top if this file, e.g. 'UPDATE'
      * @param {String} resource Name of the resource to fetch, e.g. 'posts'
      * @param {Object} params The REST request params, depending on the type
-     * @returns {Promise} The REST response
+     * @returns {Object} { url, options } The HTTP request parameters
+     */
+    const convertRESTRequestToHTTP = (type, resource, params) => {
+		console.log(type)
+		console.log(params)
+		console.log(params.filter)
+		console.log(resource)
+        let url = '';
+        const options = {};
+		options.headers = new Headers();
+        switch (type) {
+        case GET_LIST: {
+            const { page, perPage } = params.pagination;
+            const { field, order } = params.sort;
+			options.headers.set('Range-Unit','items');
+			options.headers.set('Range',((page-1)*perPage) + '-' + ((page * perPage) -1)   );
+			const pf = params.filter;
+			Object.keys(pf).map(function (b){pf[b]='ilike.' + pf[b].replace(/:/,'') + '%' })
+            let query = {
+                order: field + '.' +  order.toLowerCase(),
+            };
+			Object.assign(query,pf)
+            url = `${apiUrl}/${resource}?${queryParameters(query)}`;
+            break;
+        }
+        case GET_ONE:
+            url = `${apiUrl}/${resource}?id=eq.${params.id}`;
+            break;
+        case GET_MANY: {
+            url = `${apiUrl}/${resource}?id=in.${params.ids.join(',')}`;
+            break;
+        }
+        case GET_MANY_REFERENCE: {
+			let query={}
+			query[params.target]=params.id;
+            url = `${apiUrl}/${resource}?${queryParameters(query)}`;
+            break;
+        }
+        case UPDATE:
+            url = `${apiUrl}/${resource}?id=eq.${params.id}`;
+            options.method = 'PATCH';
+            options.body = JSON.stringify(params.data);
+            break;
+        case CREATE:
+            url = `${apiUrl}/${resource}`;
+			options.headers.set('Prefer','return=representation');
+            options.method = 'POST';
+            options.body = JSON.stringify(params.data);
+            break;
+        case DELETE:
+            url = `${apiUrl}/${resource}?id=eq.${params.id}`;
+            options.method = 'DELETE';
+            break;
+        default:
+            throw new Error(`Unsupported fetch action type ${type}`);
+        }
+        return { url, options };
+    };
+
+    /**
+     * @param {Object} response HTTP response from fetch()
+     * @param {String} type One of the constants appearing at the top if this file, e.g. 'UPDATE'
+     * @param {String} resource Name of the resource to fetch, e.g. 'posts'
+     * @param {Object} params The REST request params, depending on the type
+     * @returns {Object} REST response
+     */
+    const convertHTTPResponseToREST = (response, type, resource, params) => {
+        const { headers, json } = response;
+        switch (type) {
+        case GET_LIST:
+            if (!headers.has('content-range')) {
+                throw new Error('The Content-Range header is missing in the HTTP Response. The simple REST client expects responses for lists of resources to contain this header with the total number of results to build the pagination. If you are using CORS, did you declare Content-Range in the Access-Control-Expose-Headers header?');
+            }
+			const maxInPage = parseInt(headers.get('content-range').split('/')[0].split('-').pop(), 10) +1
+            return {
+                data: json.map(x => x),
+                total: parseInt(headers.get('content-range').split('/').pop(), 10) || maxInPage,
+            };
+        case CREATE:
+            return { ...params.data, id: json.id };
+        case UPDATE:
+            return { ...params.data, id: params.id };
+        default:
+            return json;
+        }
+    };
+
+    /**
+     * @param {string} type Request type, e.g GET_LIST
+     * @param {string} resource Resource name, e.g. "posts"
+     * @param {Object} payload Request parameters. Depends on the request type
+     * @returns {Promise} the Promise for a REST response
      */
     return (type, resource, params) => {
-        const collection = restServer.getCollection(resource);
-        if (!collection) {
-            return new Promise((_, reject) => reject(new Error(`Undefined collection "${resource}"`)));
-        }
-        let response;
-        try {
-            response = getResponse(type, resource, params);
-        } catch (error) {
-            return new Promise((_, reject) => reject(error));
-        }
-        if (response === false) {
-            return new Promise((_, reject) => reject(new Error(`Unsupported fetch action type ${type}`)));
-        }
-        if (loggingEnabled) {
-            log(type, resource, params, response);
-        }
-        return new Promise(resolve => resolve(response));
+        const { url, options } = convertRESTRequestToHTTP(type, resource, params);
+        return httpClient(url, options)
+            .then(response => convertHTTPResponseToREST(response, type, resource, params));
     };
 };
