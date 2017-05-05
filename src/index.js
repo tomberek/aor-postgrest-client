@@ -45,6 +45,7 @@ export default (apiUrl, httpClient = fetchJson) => {
             const { field, order } = params.sort;
 			options.headers.set('Range-Unit','items');
 			options.headers.set('Range',((page-1)*perPage) + '-' + ((page * perPage) -1)   );
+			options.headers.set('Prefer','count=exact');
 			const pf = params.filter;
 			Object.keys(pf).map(function (b){pf[b]='ilike.' + pf[b].replace(/:/,'') + '%' })
             let query = {
