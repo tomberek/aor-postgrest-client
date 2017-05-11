@@ -100,6 +100,7 @@ export default (apiUrl, httpClient = fetchJson) => {
         const { headers, json } = response;
         switch (type) {
         case GET_LIST:
+        case GET_MANY_REFERENCE:
             if (!headers.has('content-range')) {
                 throw new Error('The Content-Range header is missing in the HTTP Response. The simple REST client expects responses for lists of resources to contain this header with the total number of results to build the pagination. If you are using CORS, did you declare Content-Range in the Access-Control-Expose-Headers header?');
             }
@@ -113,7 +114,7 @@ export default (apiUrl, httpClient = fetchJson) => {
         case UPDATE:
             return { ...params.data, id: params.id };
         default:
-            return json;
+            return { data: json };
         }
     };
 
