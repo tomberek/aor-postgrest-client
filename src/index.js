@@ -47,7 +47,9 @@ export default (apiUrl, httpClient = fetchJson) => {
 			options.headers.set('Range',((page-1)*perPage) + '-' + ((page * perPage) -1)   );
 			options.headers.set('Prefer','count=exact');
 			const pf = params.filter;
-			Object.keys(pf).map(function (b){pf[b]='ilike.' + pf[b].replace(/:/,'') + '%' })
+			Object.keys(pf).map(function (b) {
+				pf[b]='ilike.%' + pf[b].replace(/:/,'') + '%'
+			})
             let query = {
                 order: field + '.' +  order.toLowerCase(),
             };
