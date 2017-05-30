@@ -25,6 +25,35 @@ import {
  * DELETE       => DELETE http://my.api.url/posts?id=eq.123
  */
 export default (apiUrl, httpClient = fetchJson) => {
+    const convertFilters = (filters) => {
+        let rest = {};
+
+        Object.keys(filters).map(function (key) {
+            switch (typeof filters[key]) {
+                case 'string':
+                    rest[key]='ilike.*' + filters[key].replace(/:/,'') + '*';
+                    break;
+
+                case 'boolean':
+                    rest[key]='is.' + filters[key];
+                    break;
+
+                case 'undefined':
+                    rest[key]='is.null';
+                    break;
+
+                case 'number':
+                    rest[key]='eq.' + filters[key];
+                    break;
+
+                default:
+                    rest[key]='ilike.*' + filters[key].toString().replace(/:/,'') + '*';
+                    break;
+            }
+        });
+        return rest;
+    }
+
     /**
      * @param {String} type One of the constants appearing at the top if this file, e.g. 'UPDATE'
      * @param {String} resource Name of the resource to fetch, e.g. 'posts'
@@ -47,13 +76,10 @@ export default (apiUrl, httpClient = fetchJson) => {
 			options.headers.set('Range',((page-1)*perPage) + '-' + ((page * perPage) -1)   );
 			options.headers.set('Prefer','count=exact');
 			const pf = params.filter;
-			Object.keys(pf).map(function (b) {
-				pf[b]='ilike.%' + pf[b].replace(/:/,'') + '%'
-			})
             let query = {
                 order: field + '.' +  order.toLowerCase(),
             };
-			Object.assign(query,pf)
+			Object.assign(query, convertFilters(params.filter));
             url = `${apiUrl}/${resource}?${queryParameters(query)}`;
             break;
         }
@@ -65,8 +91,9 @@ export default (apiUrl, httpClient = fetchJson) => {
             break;
         }
         case GET_MANY_REFERENCE: {
-			let query={}
-			query[params.target]=params.id;
+            const filters = {};
+			filters[params.target] = params.id;
+			const query = convertFilters(filters);
             url = `${apiUrl}/${resource}?${queryParameters(query)}`;
             break;
         }
