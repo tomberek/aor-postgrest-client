@@ -92,8 +92,12 @@ export default (apiUrl, httpClient = fetchJson) => {
         }
         case GET_MANY_REFERENCE: {
             const filters = {};
+            const { field, order } = params.sort;
 			filters[params.target] = params.id;
-			const query = convertFilters(filters);
+            let query = {
+                order: field + '.' +  order.toLowerCase(),
+            };
+			Object.assign(query, convertFilters(filters));
             url = `${apiUrl}/${resource}?${queryParameters(query)}`;
             break;
         }
