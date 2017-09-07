@@ -35,7 +35,6 @@ export default (apiUrl, httpClient = fetchJson) => {
     let rest = {};
 
     Object.keys(filters).map(function(key) {
-      console.log('HIII2');
       switch (typeof filters[key]) {
         case 'string':
           if (key === 'status' || key === 'relationship') {
@@ -103,7 +102,6 @@ export default (apiUrl, httpClient = fetchJson) => {
         let query = {
           order: field + '.' + order.toLowerCase()
         };
-        console.log('HIII');
         Object.assign(query, convertFilters(params.filter));
         url = `${apiUrl}/${resource}?${queryParameters(query)}`;
         url = url.replace("%26", "&").replace("%3D", "=");
