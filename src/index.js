@@ -99,6 +99,7 @@ export default (apiUrl, httpClient = fetchJson) => {
           'Range',
           (page - 1) * perPage + '-' + (page * perPage - 1)
         );
+        options.headers.set("Prefer", "count=exact");
         let query = {
           order: field + '.' + order.toLowerCase()
         };
