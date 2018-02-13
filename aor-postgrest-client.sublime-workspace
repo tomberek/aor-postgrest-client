@@ -1,0 +1,1718 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"imp",
+				"import\timport (...) ʂ"
+			],
+			[
+				"toke",
+				"tokenString\t ν"
+			],
+			[
+				"init",
+				"initPgx\tpgx.ConnPool, error ƒ"
+			],
+			[
+				"ob",
+				"reqbodyObj\t*ReqRegisterPayload ν"
+			],
+			[
+				"sess",
+				"sessionid\tstring ν"
+			],
+			[
+				"RspRegi",
+				"RspRegisterSuccessPayload\tumsfunc.UmsRegisterRsp ʈ"
+			],
+			[
+				"RspReg",
+				"RspRegisterPayload\tstruct ʈ"
+			],
+			[
+				"Req",
+				"ReqRegisterPayload\tstruct ʈ"
+			],
+			[
+				"c",
+				"clientIp\t ν"
+			],
+			[
+				"my",
+				"myToken\tjwt.Auth ν"
+			],
+			[
+				"RspHeader",
+				"setupResponseHeader\t ƒ"
+			],
+			[
+				"Pro",
+				"ProductMode\tbool ν"
+			],
+			[
+				"f",
+				"false\t Ɩ"
+			],
+			[
+				"st",
+				"Status\tint ν"
+			],
+			[
+				"reqhe",
+				"reqheader\t*ReqHeader ν"
+			],
+			[
+				"rsppay",
+				"rsppayload\t*RspPayload ν"
+			],
+			[
+				"rsphead",
+				"rspheader\t*RspHeader ν"
+			],
+			[
+				"rsphea",
+				"rspheader\t*RspHeader ν"
+			],
+			[
+				"reqh",
+				"requestheader\t*ReqHeader ν"
+			],
+			[
+				"key",
+				"key1\tstring ν"
+			],
+			[
+				"Rsppay",
+				"rsppayload\t*RspPayload ν"
+			],
+			[
+				"rsph",
+				"rspheader\t*RspHeader ν"
+			],
+			[
+				"req",
+				"reqpayload\tReqPayload ν"
+			],
+			[
+				"Rsp",
+				"RspPayload\tstruct ʈ"
+			],
+			[
+				"S",
+				"Stp\tstring ν"
+			],
+			[
+				"ser",
+				"serverId\tstring ν"
+			],
+			[
+				"respon",
+				"responseHeader\t*RspHeader ν"
+			],
+			[
+				"res",
+				"responseHeader\t*RspHeader ν"
+			],
+			[
+				"client",
+				"ClientName\t Ɩ"
+			],
+			[
+				"cp",
+				"cpStr\t ν"
+			],
+			[
+				"En",
+				"Encrypt\t[]byte, error ƒ"
+			],
+			[
+				"regi",
+				"registerReq\tRegister ν"
+			],
+			[
+				"ge",
+				"generateHardwareID\tstring ƒ"
+			],
+			[
+				"numb",
+				"number1\tuint64 ν"
+			],
+			[
+				"hea",
+				"headerSet\t ƒ"
+			],
+			[
+				"requ",
+				"requestSequence\t ν"
+			],
+			[
+				"get",
+				"GetFasthttpHeaders\tval string ƒ"
+			],
+			[
+				"error",
+				"errorMesg\tstring ν"
+			],
+			[
+				"Au",
+				"AuthCookie\t ν"
+			],
+			[
+				"conn",
+				"connNum\t ν"
+			],
+			[
+				"Conn",
+				"ConnNum\tuint64 ν"
+			],
+			[
+				"Aes",
+				"AesCrypt\tstruct ʈ"
+			],
+			[
+				"aes",
+				"aesKey\tstring ν"
+			],
+			[
+				"R",
+				"RegisterFirst\tstruct ʈ"
+			],
+			[
+				"j",
+				"jsonByte\t ν"
+			],
+			[
+				"str",
+				"strKey\tstring ν"
+			],
+			[
+				"conf",
+				"Configuration\t*config.Config ν"
+			],
+			[
+				"C",
+				"Configuration\t*config.Config ν"
+			],
+			[
+				"Po",
+				"Postgres\tPostgres ν"
+			],
+			[
+				"Un",
+				"UnixNano\tint64 ƒ"
+			],
+			[
+				"Pr",
+				"Println\tn int, err error ƒ"
+			],
+			[
+				"Logi",
+				"loginHandler\t*gin.Engine ƒ"
+			],
+			[
+				"respo",
+				"ResponseBody"
+			],
+			[
+				"Re",
+				"RequiresPermissions"
+			],
+			[
+				"d3",
+				"d3data"
+			],
+			[
+				"view",
+				"viewFlow"
+			],
+			[
+				"op",
+				"option\tTag"
+			],
+			[
+				"_",
+				"_dataShift"
+			],
+			[
+				"tim",
+				"timer"
+			],
+			[
+				"temp",
+				"tempData"
+			],
+			[
+				"tot",
+				"totalCount"
+			],
+			[
+				"tr",
+				"cityTraffic"
+			],
+			[
+				"se",
+				"select"
+			],
+			[
+				"java",
+				"javadata"
+			],
+			[
+				"stat",
+				"station"
+			],
+			[
+				"li",
+				"line-height"
+			],
+			[
+				"da",
+				"dataset"
+			],
+			[
+				"ma",
+				"map"
+			],
+			[
+				"data",
+				"datahash"
+			],
+			[
+				"rang",
+				"rangeBand"
+			],
+			[
+				"v",
+				"vehicleFlowrate"
+			],
+			[
+				"or",
+				"orderId"
+			],
+			[
+				"bg",
+				"background-color"
+			],
+			[
+				"hei",
+				"height"
+			],
+			[
+				"wi",
+				"width"
+			],
+			[
+				"fl",
+				"float"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"re",
+				"result"
+			],
+			[
+				"json",
+				"jsonData"
+			],
+			[
+				"len",
+				"length"
+			],
+			[
+				"js",
+				"jsonResult"
+			],
+			[
+				"fff",
+				"f5f5f5"
+			],
+			[
+				"cla",
+				"className"
+			],
+			[
+				"resu",
+				"result\tFileReader"
+			],
+			[
+				"h",
+				"haystack"
+			],
+			[
+				"p",
+				"payloadType\tuint8 ν"
+			],
+			[
+				"pay",
+				"payloadType\tbyte ν"
+			],
+			[
+				"e",
+				"err"
+			],
+			[
+				"err",
+				"Error"
+			],
+			[
+				"CK",
+				"CKFinderConfig"
+			],
+			[
+				"log",
+				"logback"
+			],
+			[
+				"po",
+				"posnotifymsg"
+			],
+			[
+				"sele",
+				"selected"
+			],
+			[
+				"pu",
+				"purchaserecordDao"
+			],
+			[
+				"pro",
+				"Product"
+			],
+			[
+				"prod",
+				"productid"
+			],
+			[
+				"ca",
+				"capitalextractionrecord"
+			],
+			[
+				"max",
+				"maxlength\tAttr"
+			],
+			[
+				"productass",
+				"productassetDao"
+			],
+			[
+				"productco",
+				"productcode"
+			],
+			[
+				"ve",
+				"vendors"
+			],
+			[
+				"radio",
+				"radioSwitch"
+			],
+			[
+				"ts",
+				"tsingtec"
+			],
+			[
+				"in",
+				"interruppaymentproperty"
+			],
+			[
+				"productv",
+				"productvoucher"
+			],
+			[
+				"save",
+				"saveProductAsset"
+			],
+			[
+				"getI",
+				"getInveststartdate"
+			],
+			[
+				"setOn",
+				"setOnlinestatustime"
+			],
+			[
+				"zo",
+				"zone_switch_2"
+			],
+			[
+				"produc",
+				"product"
+			],
+			[
+				"P",
+				"Product"
+			],
+			[
+				"Prod",
+				"Product"
+			],
+			[
+				"Str",
+				"String"
+			],
+			[
+				"el",
+				"else"
+			],
+			[
+				"is",
+				"isNotBlank"
+			],
+			[
+				"Produ",
+				"Productvoucher"
+			],
+			[
+				"Goo",
+				"GoodsshelvesProductRel"
+			],
+			[
+				"Goods",
+				"GoodsshelvesProductRel"
+			],
+			[
+				"product",
+				"producttitle"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"ApiR",
+				"ApiResult"
+			],
+			[
+				"ApiRes",
+				"ApiRequest"
+			],
+			[
+				"va",
+				"validate"
+			],
+			[
+				"pat",
+				"partnersite"
+			],
+			[
+				"String",
+				"StringUtils"
+			],
+			[
+				"tem",
+				"tempProduct"
+			],
+			[
+				"setInv",
+				"setInveststartdate"
+			],
+			[
+				"go",
+				"GoodsshelvesProductRel"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/Java/Ant.sublime-build",
+					""
+				],
+				[
+					"Packages/Java/JavaC.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/Java/Ant.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/Makefile/Make.sublime-build",
+					""
+				],
+				[
+					"Packages/Makefile/Make.sublime-build",
+					"Clean"
+				],
+				[
+					"Packages/GoTools/GoTools.sublime-build",
+					""
+				],
+				[
+					"Packages/GoTools/GoTools.sublime-build",
+					"Clean Build"
+				],
+				[
+					"Packages/GoTools/GoTools.sublime-build",
+					"Run Tests"
+				],
+				[
+					"Packages/GoTools/GoTools.sublime-build",
+					"Run Tagged Tests"
+				],
+				[
+					"Packages/GoTools/GoTools.sublime-build",
+					"Run Test at Cursor"
+				],
+				[
+					"Packages/GoTools/GoTools.sublime-build",
+					"Run Current Package Tests"
+				],
+				[
+					"Packages/GoTools/GoTools.sublime-build",
+					"Run Last Test"
+				]
+			],
+			[
+				"Packages/GoTools/GoTools.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 107.0,
+		"last_filter": "install package",
+		"selected_items":
+		[
+			[
+				"install package",
+				"Package Control: Install Package"
+			],
+			[
+				"remove package",
+				"Package Control: Remove Package"
+			],
+			[
+				"remove pack",
+				"Package Control: Remove Package"
+			],
+			[
+				"removepack",
+				"Package Control: Remove Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"re",
+				"Package Control: Remove Package"
+			],
+			[
+				"package",
+				"Package Control: Remove Package"
+			],
+			[
+				"install pack",
+				"Package Control: Install Package"
+			],
+			[
+				"remove pac",
+				"Package Control: Remove Package"
+			],
+			[
+				"install pac",
+				"Package Control: Install Package"
+			],
+			[
+				"markdownlive",
+				"Preferences: MarkdownLivePreview Settings"
+			],
+			[
+				"install Pa",
+				"Package Control: Install Package"
+			],
+			[
+				"print",
+				"Print Document"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"",
+				"HTMLPrettify"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"mark",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"m",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"mar",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Upgrade Package"
+			],
+			[
+				"todo",
+				"TodoReview: Project and Open Files"
+			],
+			[
+				"packagere",
+				"Package Control: Remove Package"
+			],
+			[
+				"package control:",
+				"Package Control: Install Package"
+			],
+			[
+				"package control:rem",
+				"Package Control: Remove Package"
+			],
+			[
+				"Package Control: in",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: en",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: install package",
+				"Package Control: Install Package"
+			],
+			[
+				"ConvertToUTF8",
+				"ConvertToUTF8: Reload with Encoding"
+			]
+		],
+		"width": 516.0
+	},
+	"console":
+	{
+		"height": 183.0,
+		"history":
+		[
+			"view.run_command(\"fold_all\")",
+			"debug = on ",
+			"clear",
+			"clean",
+			"clear",
+			"export",
+			"env",
+			"show errors",
+			"mode",
+			"debug = on ",
+			"debug",
+			"env",
+			"gocode",
+			"sublime.log_commands(False)",
+			"tab_height = 10;",
+			"EncodingHelper",
+			"Install Package",
+			"install package",
+			"Install Package",
+			"install packages",
+			"sublime.log_indexing(True)",
+			"EncodingHelper",
+			"save project",
+			"sublime.log_indexing(True)",
+			"index_files"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/qinshen/git/dva/aor-postgrest-client"
+	],
+	"file_history":
+	[
+		"/Users/qinshen/git/dva/aor-postgrest-client/package.json",
+		"/Users/qinshen/git/dva/aor-postgrest-client/yarn-error.log",
+		"/Users/qinshen/git/linksmart/src/github.com/tsingson/experiments/jwt/main.go",
+		"/Users/qinshen/git/linksmart/src/github.com/tsingson/gin/cmd/main.go",
+		"/Users/qinshen/git/linksmart/src/github.com/tsingson/gin/fastclient/fastclient.go",
+		"/Users/qinshen/git/linksmart/src/github.com/tsingson/gin/log/log.go",
+		"/Users/qinshen/git/linksmart/src/github.com/tsingson/gin/ginzap/zap.go",
+		"/Users/qinshen/git/linksmart/src/github.com/tsingson/gin/ginzap/log.go",
+		"/Users/qinshen/git/linksmart/src/github.com/tsingson/gin/ginzap/README.md",
+		"/Users/qinshen/git/linksmart/src/github.com/tsingson/gin/server-cmd/main.go",
+		"/Users/qinshen/git/linksmart/src/github.com/tsingson/fastweb/server/main.go",
+		"/Users/qinshen/git/linksmart/src/common/umsAccess.go",
+		"/Users/qinshen/git/linksmart/src/github.com/tsingson/linksmart/v2/aaa/loginHandler.go",
+		"/Users/qinshen/git/linksmart/src/github.com/tsingson/linksmart/v2/aaa/main.go",
+		"/Users/qinshen/git/linksmart/src/github.com/tsingson/linksmart/v2/aaa/registerHandler.go",
+		"/Users/qinshen/git/linksmart/src/github.com/tsingson/linksmart/v2/apk/apkHandler.go",
+		"/Users/qinshen/git/linksmart/src/github.com/golang/dep/internal/gps/pkgtree/pkgtree.go",
+		"/Users/qinshen/git/linksmart/src/github.com/golang/dep/internal/gps/solve_test.go",
+		"/Users/qinshen/git/linksmart/src/github.com/golang/dep/internal/gps/solver.go",
+		"/Users/qinshen/git/linksmart/src/github.com/golang/dep/vendor/github.com/golang/protobuf/proto/all_test.go",
+		"/Users/qinshen/git/linksmart/src/github.com/tsinglab/kcp-go/Gopkg.toml",
+		"/Users/qinshen/git/linksmart/src/github.com/tsingson/linksmart/v2/doc/install-guide.md",
+		"/Users/qinshen/.bash_profile",
+		"/Users/qinshen/git/linksmart/src/common/base58.go",
+		"/Users/qinshen/git/linksmart/src/common/config.go",
+		"/Users/qinshen/git/linksmart/src/common/datetime.go",
+		"/Users/qinshen/git/linksmart/doc/ElinkSmart-IPTV系统一期接口说明文档_R0.1_v0.2_王燕_20170605.md",
+		"/Users/qinshen/git/linksmart/src/github.com/tsingson/linksmart/v1/golinksmart/handler/aaaservice.go",
+		"/Users/qinshen/git/linksmart/src/github.com/tsingson/linksmart/v1/golinksmart/handler/aaa/aaa.go",
+		"/Users/qinshen/git/linksmart/src/github.com/tsingson/linksmart/v2/common/log.go",
+		"/Users/qinshen/git/linksmart/src/github.com/tsingson/token/config/appconfig.go",
+		"/Users/qinshen/git/linksmart/src/github.com/tsingson/token/framework/exception/exception.go",
+		"/Users/qinshen/git/linksmart/src/github.com/tsingson/token/framework/task/tasks.go",
+		"/Users/qinshen/git/linksmart/src/github.com/tsingson/token/httpserver/handlers/global/golbalHandler.go",
+		"/Users/qinshen/git/linksmart/src/github.com/tsingson/token/httpserver/handlers/token/tokenhandler.go",
+		"/Users/qinshen/git/linksmart/src/github.com/tsingson/token/httpserver/router.go",
+		"/Users/qinshen/git/linksmart/src/github.com/tsingson/token/httpserver/server.go",
+		"/Users/qinshen/git/linksmart/src/github.com/tsingson/token/main.go",
+		"/Users/qinshen/git/linksmart/src/github.com/tsingson/experiments/faststatic/main.go",
+		"/Users/qinshen/git/linksmart/src/github.com/tsingson/linksmart/v2/aaa/model.go",
+		"/Users/qinshen/git/linksmart/src/github.com/tsingson/experiments/pgx/num.go",
+		"/Users/qinshen/git/linksmart/src/github.com/tsingson/linksmart/v2/aaa/registerHandler_test.go",
+		"/Users/qinshen/git/linksmart/src/github.com/tsingson/experiments/pgx/main.go",
+		"/Users/qinshen/git/linksmart/src/github.com/tsingson/experiments/pgx/util/util.go",
+		"/Users/qinshen/git/linksmart/src/github.com/tsingson/linksmart/v2/apk/getHandler.go",
+		"/Users/qinshen/git/linksmart/src/github.com/tsingson/experiments/goconvey/main_test.go",
+		"/Users/qinshen/git/linksmart/src/github.com/tsingson/linksmart/.gitignore",
+		"/Users/qinshen/git/linksmart/src/github.com/tsingson/linksmart/v2/jwt/main.go",
+		"/Users/qinshen/git/linksmart/bin/todos.conf",
+		"/Users/qinshen/git/linksmart/src/github.com/tsingson/linksmart/v2/aaa/main_windows_amd64.go",
+		"/Users/qinshen/git/linksmart/src/github.com/tsingson/linksmart/v2/aaa/makefile",
+		"/Users/qinshen/git/house-project/house-jet/pom.xml",
+		"/Users/qinshen/git/linksmart/src/github.com/tsingson/linksmart/v2/aaa/timeoutHandler.go",
+		"/Users/qinshen/git/linksmart/src/github.com/tsingson/linksmart/v2/aaa/utils.go",
+		"/Users/qinshen/git/linksmart/src/github.com/tsingson/linksmart/v2/doc/deployment-guide.md",
+		"/Users/qinshen/git/linksmart/src/github.com/tsingson/linksmart/v2/aaa/type.go",
+		"/Users/qinshen/git/linksmart/bin/config-fasthttp.toml",
+		"/Users/qinshen/git/linksmart/src/github.com/tsingson/linksmart/v2/doc/apk-aaa-v0.3.1-tsingson-20170921.md",
+		"/Users/qinshen/git/linksmart/src/github.com/tsingson/linksmart/v2/aaa/aaaFunc.go",
+		"/Users/qinshen/git/linksmart/src/github.com/tsingson/experiments/pgxq/pgx.go",
+		"/Users/qinshen/git/linksmart/src/github.com/tsingson/experiments/pgxq/main.go",
+		"/Users/qinshen/git/linksmart/src/github.com/tsingson/aes-test/aestool.go",
+		"/Users/qinshen/git/linksmart/src/github.com/tsingson/aesjava/aes.go",
+		"/Users/qinshen/git/linksmart/src/github.com/tsingson/aesjava/aes.java",
+		"/Users/qinshen/git/linksmart/bin/postgrest.conf",
+		"/Users/qinshen/git/linksmart/src/github.com/tsingson/linksmart/v2/config-fasthttp.toml",
+		"/Users/qinshen/git/linksmart/src/github.com/tsingson/linksmart/v2/doc/TODO.md",
+		"/Users/qinshen/git/linksmart/src/github.com/tsingson/linksmart/v2/ums-aaa-icd-test/main.go",
+		"/Users/qinshen/git/linksmart/src/github.com/tsingson/linksmart/v2/umsfunc/umsHandler.go",
+		"/Users/qinshen/git/linksmart/src/github.com/tsingson/linksmart/v2/aaa/emsHandler.go",
+		"/Users/qinshen/Library/Application Support/Sublime Text 3/Packages/User/SideBarEnhancements/Open With/Side Bar.sublime-menu",
+		"/Users/qinshen/git/linksmart/src/github.com/tsingson/experiments/pgxjson/main.go",
+		"/Users/qinshen/git/linksmart/src/github.com/tsingson/pgxdata/README.md",
+		"/Users/qinshen/git/linksmart/src/github.com/tsingson/pgxdata/.gitignore",
+		"/Users/qinshen/git/linksmart/src/github.com/tsingson/linksmart/v2/aaa/playHandler.go",
+		"/Users/qinshen/git/linksmart/src/github.com/tsingson/linksmart/v2/aaa/auth.go",
+		"/Users/qinshen/git/linksmart/src/github.com/tsingson/linksmart/v2/aaa/aaafunc.go",
+		"/Users/qinshen/git/linksmart/src/github.com/tsingson/linksmart/v2/aaa/session.go",
+		"/Users/qinshen/git/linksmart/src/github.com/tsingson/linksmart/v2/aaa/const.go",
+		"/Users/qinshen/git/linksmart/bin/log/uberlogger.log",
+		"/Users/qinshen/git/linksmart/src/github.com/tsingson/linksmart/v2/aaa/typeRegister.go",
+		"/Users/qinshen/git/linksmart/src/github.com/tsingson/linksmart/v2/common/base58.go",
+		"/Users/qinshen/git/linksmart/src/github.com/tsingson/linksmart/v2/aaa/aaafunc_test.go",
+		"/Users/qinshen/git/linksmart/.gitignore",
+		"/Users/qinshen/git/linksmart/src/github.com/tsingson/linksmart/v2/aaa/rex/base58.go",
+		"/Users/qinshen/git/linksmart/src/github.com/tsingson/linksmart/v2/aaa/rex/base58_test.go",
+		"/Users/qinshen/git/linksmart/src/github.com/tsingson/linksmart/v2/aaa/rex/rex.go",
+		"/Users/qinshen/git/linksmart/src/github.com/tsingson/linksmart/v2/aaa/rex/rex_test.go",
+		"/Users/qinshen/git/linksmart/src/github.com/tsingson/linksmart/v2/aaa/middleware.go",
+		"/Users/qinshen/git/linksmart/src/github.com/tsingson/linksmart/v2/aaa/byteconv.go",
+		"/Users/qinshen/git/linksmart/src/github.com/tsingson/jwt-auth/jwt/auth-http.go",
+		"/Users/qinshen/git/linksmart/src/github.com/tsingson/jwt-auth/jwt/auth-fasthttp.go",
+		"/Users/qinshen/git/linksmart/src/github.com/tsingson/jwt-auth/examples/bearerTokensRsa/main.go",
+		"/Users/qinshen/git/linksmart/src/github.com/tsingson/jwt-auth/examples/login_logout_RSA/main.go",
+		"/Users/qinshen/git/linksmart/src/github.com/tsingson/linksmart/v2/aaa/tokenHandler.go",
+		"/Users/qinshen/git/linksmart/src/github.com/tsingson/linksmart/v2/common/token.go",
+		"/Users/qinshen/git/linksmart/src/github.com/tsingson/linksmart/v2/common/ipaddress_test.go",
+		"/Users/qinshen/git/linksmart/src/github.com/tsingson/linksmart/v2/aaa/aescrypt.go",
+		"/Users/qinshen/git/linksmart/src/github.com/tsingson/linksmart/v2/common/datetime.go",
+		"/Users/qinshen/git/linksmart/src/github.com/tsingson/linksmart/v2/umsfunc/model.go",
+		"/Users/qinshen/git/linksmart/src/github.com/tsingson/linksmart/v2/common/ipaddress.go",
+		"/Users/qinshen/git/linksmart/src/github.com/tsingson/linksmart/v2/ums--aaa-icd-test/config.go",
+		"/Users/qinshen/git/linksmart/src/github.com/tsingson/linksmart/v2/common/config.go",
+		"/Users/qinshen/git/linksmart/src/github.com/tsingson/linksmart/v2/ums--aaa-icd-test/main.go",
+		"/Users/qinshen/git/linksmart/src/github.com/tsingson/linksmart/v2/umsfunc/requestModel.go",
+		"/Users/qinshen/git/linksmart/src/github.com/tsingson/linksmart/v2/common/httpclient.go",
+		"/Users/qinshen/git/linksmart/src/github.com/tsingson/linksmart/v2/ums/main.go",
+		"/Users/qinshen/git/linksmart/src/github.com/tsingson/cache/example/json.go",
+		"/Users/qinshen/git/linksmart/src/github.com/tsingson/linksmart/v2/common/aescrypt.go",
+		"/Users/qinshen/git/linksmart/src/github.com/tsingson/linksmart/v2/common/common.go",
+		"/Users/qinshen/git/linksmart/src/github.com/tsingson/linksmart/v2/aaa/config.go",
+		"/Users/qinshen/git/linksmart/src/github.com/tsingson/cache/redix/redix.go",
+		"/Users/qinshen/git/linksmart/src/github.com/tsingson/cache/example/msgpack.go",
+		"/Users/qinshen/git/linksmart/src/github.com/tsingson/linksmart/v2/aaa/clip.go",
+		"/Users/qinshen/git/linksmart/src/github.com/tsingson/linksmart/v2/apk/json.go",
+		"/Users/qinshen/git/linksmart/src/github.com/tsingson/linksmart/v2/apk/main.go",
+		"/Users/qinshen/git/linksmart/src/github.com/tsingson/linksmart/v2/ums/config.go",
+		"/Users/qinshen/git/linksmart/src/github.com/tsingson/linksmart/v2/apk/config.go",
+		"/Users/qinshen/git/linksmart/src/github.com/tsingson/linksmart/v2/ums/requestModel.go",
+		"/Users/qinshen/git/linksmart/src/github.com/tsingson/linksmart/v2/ums/umsHandler.go",
+		"/Users/qinshen/git/linksmart/src/github.com/tsingson/jwt-auth/jwt/auth.go",
+		"/Users/qinshen/git/linksmart/src/github.com/tsingson/jwt-auth/jwt/jwtToken.go",
+		"/Users/qinshen/git/linksmart/src/github.com/tsingson/cache/redix/rex.go",
+		"/Users/qinshen/git/linksmart/src/github.com/tsingson/linksmart/v2/aaa/aaaHandler.go",
+		"/Users/qinshen/git/linksmart/bin/config-linksmart.toml",
+		"/Users/qinshen/git/linksmart/src/github.com/tsingson/linksmart/v2/ums/const.go",
+		"/Users/qinshen/git/linksmart/src/github.com/tsingson/linksmart/v2/aaa/uuid.go",
+		"/Users/qinshen/git/linksmart/src/github.com/tsingson/linksmart/v2/apk/acecrypt.go"
+	],
+	"find":
+	{
+		"height": 37.0
+	},
+	"find_in_files":
+	{
+		"height": 208.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+		],
+		"highlight": false,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": false,
+		"use_buffer2": false,
+		"whole_word": false,
+		"wrap": false
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"auto_name": "",
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.clone": -1,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content"
+							],
+							"default_dir": "/Users/qinshen/git/dva/aor-postgrest-client",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 37.0
+	},
+	"input":
+	{
+		"height": 72.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.9o:///Users/qinshen/git/go-project/gotcp":
+	{
+		"height": 152.0
+	},
+	"output.9o:///Users/qinshen/git/linksmart/src/epg":
+	{
+		"height": 170.0
+	},
+	"output.9o:///Users/qinshen/git/linksmart/src/fastweb":
+	{
+		"height": 199.0
+	},
+	"output.9o:///Users/qinshen/git/linksmart/src/github.com/tsingson/experiments/jwtt":
+	{
+		"height": 211.0
+	},
+	"output.9o:///Users/qinshen/git/linksmart/src/github.com/tsingson/experiments/redis-cache":
+	{
+		"height": 205.0
+	},
+	"output.9o:///Users/qinshen/git/linksmart/src/github.com/tsingson/gramework":
+	{
+		"height": 205.0
+	},
+	"output.9o:///Users/qinshen/git/linksmart/src/github.com/tsingson/jwt-auth/jwt":
+	{
+		"height": 211.0
+	},
+	"output.9o:///Users/qinshen/git/linksmart/src/github.com/tsingson/linksmart/v2/aaa":
+	{
+		"height": 205.0
+	},
+	"output.9o:///Users/qinshen/git/linksmart/src/github.com/tsingson/linksmart/v2/apk":
+	{
+		"height": 200.0
+	},
+	"output.9o:///Users/qinshen/git/linksmart/src/golinksmart/postjson":
+	{
+		"height": 217.0
+	},
+	"output.9o:///Users/qinshen/git/linksmart/src/hello":
+	{
+		"height": 170.0
+	},
+	"output.9o:///Users/qinshen/git/linksmart/src/mongin":
+	{
+		"height": 180.0
+	},
+	"output.9o:///Users/qinshen/git/linksmart/src/proxy":
+	{
+		"height": 277.0
+	},
+	"output.9o:///Users/qinshen/git/linksmart/src/test/fasthttprouter":
+	{
+		"height": 205.0
+	},
+	"output.GitSavvy":
+	{
+		"height": 146.0
+	},
+	"output.GoSublime-main-output":
+	{
+		"height": 152.0
+	},
+	"output.GoSublime-output":
+	{
+		"height": 477.0
+	},
+	"output.GoSublime.mg9-output":
+	{
+		"height": 152.0
+	},
+	"output.GsDoc-output-output":
+	{
+		"height": 123.0
+	},
+	"output.MarGo-output":
+	{
+		"height": 75.0
+	},
+	"output.astyle_error_message":
+	{
+		"height": 0.0
+	},
+	"output.exec":
+	{
+		"height": 146.0
+	},
+	"output.find_results":
+	{
+		"height": 547.0
+	},
+	"pinned_build_system": "",
+	"project": "aor-postgrest-client.sublime-project",
+	"replace":
+	{
+		"height": 70.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"p3.",
+				"src/main/webapp/gis/js/p3.js"
+			],
+			[
+				"c3.html",
+				"src/main/webapp/gis/c3.html"
+			],
+			[
+				"p3.js",
+				"src/main/webapp/gis/js/p3.js"
+			],
+			[
+				"a.js",
+				"src/main/webapp/gis/js/a.js"
+			],
+			[
+				"constan",
+				"src/main/webapp/gis/js/constant.js"
+			],
+			[
+				"api.md",
+				"api.md"
+			],
+			[
+				"c3.js",
+				"src/main/webapp/gis/c3/c3.js"
+			],
+			[
+				"api.m",
+				"api.md"
+			],
+			[
+				"a-zoo",
+				"src/main/webapp/gis/js/a-zoom12.js"
+			],
+			[
+				"a.html",
+				"src/main/webapp/gis/a.html"
+			],
+			[
+				"a-z",
+				"src/main/webapp/gis/js/a-zoom12.js"
+			],
+			[
+				"a-",
+				"src/main/webapp/gis/a-zoom12.html"
+			],
+			[
+				"map-deploy1.js",
+				"src/main/webapp/gis/js/map-deploy1.js"
+			],
+			[
+				"c3.htm",
+				"src/main/webapp/gis/c3.html"
+			],
+			[
+				"map-de",
+				"src/main/webapp/gis/js/map-deploy1.js"
+			],
+			[
+				"de",
+				"src/main/webapp/gis/deploy1.html"
+			],
+			[
+				"map-al",
+				"src/main/webapp/gis/js/map-all.js"
+			],
+			[
+				"all.html",
+				"src/main/webapp/gis/all.html"
+			],
+			[
+				"all",
+				"src/main/webapp/gis/all.html"
+			],
+			[
+				"c3.",
+				"src/main/webapp/gis/c3.html"
+			],
+			[
+				"c3.ht",
+				"src/main/webapp/gis/c3.html"
+			],
+			[
+				"api.",
+				"api.md"
+			],
+			[
+				"map-depl",
+				"src/main/webapp/gis/js/map-deploy.js"
+			],
+			[
+				"deploy.ht",
+				"src/main/webapp/gis/deploy.html"
+			],
+			[
+				"constant-deploy",
+				"src/main/webapp/gis/js/constant-deploy.js"
+			],
+			[
+				"gatherstationlist",
+				"src/main/webapp/WEB-INF/views/modules/device/gatherStationList.jsp"
+			],
+			[
+				"gathersta",
+				"src/main/webapp/WEB-INF/views/modules/device/gatherStationList.jsp"
+			],
+			[
+				"pom.x",
+				"pom.xml"
+			],
+			[
+				"configuration.java",
+				"src/main/java/org/apache/ibatis/session/Configuration.java"
+			],
+			[
+				"envelope.",
+				"vendor/src/github.com/olahol/melody/envelope.go"
+			],
+			[
+				"toml",
+				"src/github.com/tsingson/influxdb/toml/toml.go"
+			],
+			[
+				"config.go",
+				"src/github.com/tsingson/influxdb/services/udp/config.go"
+			],
+			[
+				"config",
+				"src/github.com/tsingson/influxdb/tsdb/config.go"
+			],
+			[
+				"sqlsto",
+				"src/github.com/tsingson/grafana/pkg/services/sqlstore/sqlstore.go"
+			],
+			[
+				"grafana-ser",
+				"pkg/cmd/grafana-server/main.go"
+			],
+			[
+				"appba",
+				"src/main/resources/appbase.properties"
+			],
+			[
+				"sqlhelper",
+				"src/main/java/com/tsingtec/jet/common/persistence/interceptor/SQLHelper.java"
+			],
+			[
+				"sqlhelp",
+				"src/main/java/com/thinkgem/jeesite/common/persistence/interceptor/SQLHelper.java"
+			],
+			[
+				"goodsshelvesform",
+				"src/main/webapp/WEB-INF/views/house/publish/goodsshelvesForm.jsp"
+			],
+			[
+				"productformentity",
+				"src/main/webapp/WEB-INF/views/house/product/productFormEntity.jsp"
+			],
+			[
+				"productformn",
+				"src/main/webapp/WEB-INF/views/house/product/productFormNew.jsp"
+			],
+			[
+				"productformen",
+				"src/main/webapp/WEB-INF/views/house/product/productFormEntity.jsp"
+			],
+			[
+				"app",
+				"src/main/webapp/static/ckfinder/skins/kama/app.css"
+			],
+			[
+				"goodsshelvesfo",
+				"src/main/webapp/WEB-INF/views/house/publish/goodsshelvesForm.jsp"
+			],
+			[
+				"userprofilelist",
+				"src/main/webapp/WEB-INF/views/house/investor/userprofileList.jsp"
+			],
+			[
+				"purchaserecordlist",
+				"src/main/webapp/WEB-INF/views/house/investor/purchaserecordList.jsp"
+			],
+			[
+				"prepurchaserecordlist",
+				"src/main/webapp/WEB-INF/views/house/investor/prepurchaserecordList.jsp"
+			],
+			[
+				"userlist",
+				"src/main/webapp/WEB-INF/views/modules/sys/userList.jsp"
+			],
+			[
+				"posnotifymsglistsimple",
+				"src/main/webapp/WEB-INF/views/house/platform/PosnotifymsgListSimple.jsp"
+			],
+			[
+				"userindex",
+				"src/main/webapp/WEB-INF/views/modules/sys/userIndex.jsp"
+			],
+			[
+				"posnotifycon",
+				"src/main/java/com/tsinglab/house/Platform/web/PosnotifymsgController.java"
+			],
+			[
+				"goodsshelvesproductlist",
+				"src/main/webapp/WEB-INF/views/house/publish/goodsshelvesProductList.jsp"
+			],
+			[
+				"goodsshelveslistmanage",
+				"src/main/webapp/WEB-INF/views/house/publish/goodsshelvesListManage.jsp"
+			],
+			[
+				"goodscon",
+				"src/main/java/com/tsinglab/house/Publish/web/GoodsshelvesProductRelController.java"
+			],
+			[
+				"goodsshelveslist",
+				"src/main/webapp/WEB-INF/views/house/publish/goodsshelvesList.jsp"
+			],
+			[
+				"goodsshelvesc",
+				"src/main/java/com/tsinglab/house/Publish/web/GoodsshelvesController.java"
+			],
+			[
+				"productstacklist",
+				"src/main/webapp/WEB-INF/views/house/product/productStackList.jsp"
+			],
+			[
+				"productpublishlist",
+				"src/main/webapp/WEB-INF/views/house/product/productPublishList.jsp"
+			],
+			[
+				"productformleonnew",
+				"src/main/webapp/WEB-INF/views/house/product/productFormLeonNew.jsp"
+			],
+			[
+				"productlist",
+				"src/main/webapp/WEB-INF/views/house/product/productList.jsp"
+			],
+			[
+				"productcon",
+				"src/main/java/com/tsinglab/house/Product/web/ProductController.java"
+			],
+			[
+				"productlistbyproject",
+				"src/main/webapp/WEB-INF/views/house/product/productListByProject.jsp"
+			],
+			[
+				"productform",
+				"src/main/webapp/WEB-INF/views/house/product/productFormEntity.jsp"
+			],
+			[
+				"financialreqlist",
+				"src/main/webapp/WEB-INF/views/house/platform/financialReqList.jsp"
+			],
+			[
+				"purchaserecordauditlist",
+				"src/main/webapp/WEB-INF/views/house/investor/purchaserecordAuditList.jsp"
+			],
+			[
+				"purchaserecordto",
+				"src/main/webapp/WEB-INF/views/house/investor/purchaserecordTotalList.jsp"
+			],
+			[
+				"purchaserecordtotallist",
+				"src/main/webapp/WEB-INF/views/house/investor/purchaserecordTotalList.jsp"
+			],
+			[
+				"uservoucherlist",
+				"src/main/webapp/WEB-INF/views/house/platform/uservoucherList.jsp"
+			],
+			[
+				"capitalex",
+				"src/main/java/com/tsinglab/house/Platform/web/CapitalextractionrecordController.java"
+			],
+			[
+				"catpialex",
+				"src/main/java/com/tsinglab/house/Platform/service/CapitalextractionrecordService.java"
+			],
+			[
+				"productdao",
+				"src/main/resources/mappings/house/product/ProductDao.xml"
+			],
+			[
+				"capitalextractionrecorddao.ja",
+				"src/main/java/com/tsinglab/house/Platform/dao/CapitalextractionrecordDao.java"
+			],
+			[
+				"productdao.x",
+				"src/main/resources/mappings/house/product/ProductDao.xml"
+			],
+			[
+				"capitalextractionrecord",
+				"src/main/resources/mappings/house/platform/CapitalextractionrecordDao.xml"
+			],
+			[
+				"capitalextractionrecordlist",
+				"src/main/webapp/WEB-INF/views/house/platform/capitalextractionrecordList.jsp"
+			],
+			[
+				"posno",
+				"src/main/webapp/WEB-INF/views/house/platform/PosnotifymsgList.jsp"
+			],
+			[
+				"posnoti",
+				"src/main/java/com/tsinglab/house/Platform/web/PosnotifymsgController.java"
+			],
+			[
+				"pos",
+				"src/main/java/com/tsinglab/house/Platform/service/PosnotifymsgService.java"
+			],
+			[
+				"page",
+				"src/main/java/com/tsingtec/jet/common/persistence/Page.java"
+			],
+			[
+				"weedfs",
+				"note/weedfs.txt"
+			],
+			[
+				"amount",
+				"src/main/resources/mappings/house/platform/AmountchangerecordDao.xml"
+			],
+			[
+				"userprofiledao.xm",
+				"src/main/resources/mappings/house/investor/UserprofileDao.xml"
+			],
+			[
+				"amountchangerecordlist",
+				"src/main/webapp/WEB-INF/views/house/platform/AmountchangerecordList.jsp"
+			],
+			[
+				"upload",
+				"src/main/java/com/tsingtec/jet/common/utils/UploadUtils.java"
+			],
+			[
+				"productaudit",
+				"src/main/webapp/WEB-INF/views/house/product/productAuditList.jsp"
+			],
+			[
+				"productlist.js",
+				"src/main/webapp/WEB-INF/views/house/product/productList.jsp"
+			],
+			[
+				"goodsshelvesproductadd",
+				"src/main/webapp/WEB-INF/views/house/publish/goodsshelvesProductAdd.jsp"
+			],
+			[
+				"productonlinelist",
+				"src/main/webapp/WEB-INF/views/house/product/productOnlineList.jsp"
+			],
+			[
+				"pom.xm",
+				"pom.xml"
+			],
+			[
+				"we",
+				"src/main/webapp/WEB-INF/web.xml"
+			],
+			[
+				"web.xm",
+				"src/main/webapp/WEB-INF/web.xml"
+			],
+			[
+				"web.xml",
+				"src/main/webapp/WEB-INF/web.xml"
+			],
+			[
+				"posnotifymsglist",
+				"src/main/webapp/WEB-INF/views/house/platform/PosnotifymsgListSimple.jsp"
+			],
+			[
+				"posnotify",
+				"src/main/webapp/WEB-INF/views/house/platform/PosnotifymsgList.jsp"
+			],
+			[
+				"userli",
+				"src/main/webapp/WEB-INF/views/modules/sys/userList.jsp"
+			],
+			[
+				"posnotifymsgservice.j",
+				"src/main/java/com/tsinglab/house/Platform/service/PosnotifymsgService.java"
+			],
+			[
+				"usercon",
+				"src/main/java/com/tsingtec/jet/modules/sys/web/UserController.java"
+			],
+			[
+				"posnotifymsgcon",
+				"src/main/java/com/tsinglab/house/Platform/web/PosnotifymsgController.java"
+			],
+			[
+				"posnot",
+				"src/main/resources/mappings/house/platform/PosnotifymsgDao.xml"
+			],
+			[
+				"userdao.xm",
+				"src/main/resources/mappings/modules/sys/UserDao.xml"
+			],
+			[
+				"posnotifymsgdao.x",
+				"src/main/resources/mappings/house/platform/PosnotifymsgDao.xml"
+			],
+			[
+				"user.ja",
+				"src/main/java/com/tsingtec/jet/modules/sys/entity/User.java"
+			],
+			[
+				"baseen",
+				"src/main/java/com/tsingtec/jet/common/persistence/BaseEntity.java"
+			],
+			[
+				"posnotifymsg",
+				"src/main/java/com/tsinglab/house/Platform/service/PosnotifymsgService.java"
+			],
+			[
+				"posnotifymsgdao.ja",
+				"src/main/java/com/tsinglab/house/Platform/dao/PosnotifymsgDao.java"
+			],
+			[
+				"userdao.x",
+				"src/main/resources/mappings/modules/sys/UserDao.xml"
+			],
+			[
+				"productser",
+				"src/main/java/com/tsinglab/house/Product/service/ProductService.java"
+			],
+			[
+				"posnoitfymsgli",
+				"src/main/webapp/WEB-INF/views/house/platform/PosnotifymsgListSimple.jsp"
+			],
+			[
+				"postnotifymsg",
+				"src/main/java/com/tsinglab/house/Platform/entity/Posnotifymsg.java"
+			],
+			[
+				"productvoucherlistwithformpromo",
+				"src/main/webapp/WEB-INF/views/house/product/productvoucherListWithFormPromotion.jsp"
+			],
+			[
+				"productvoucherlistwithformproduct",
+				"src/main/webapp/WEB-INF/views/house/product/productvoucherListWithFormProduct.jsp"
+			],
+			[
+				"pom",
+				"pom.xml"
+			],
+			[
+				"productlist.",
+				"src/main/webapp/WEB-INF/views/house/product/productList.jsp"
+			],
+			[
+				"productdao.xml",
+				"src/main/resources/mappings/house/product/ProductDao.xml"
+			],
+			[
+				"productonline",
+				"src/main/webapp/WEB-INF/views/house/product/productOnlineList.jsp"
+			],
+			[
+				"productsta",
+				"src/main/webapp/WEB-INF/views/house/product/productStackList.jsp"
+			],
+			[
+				"ckfinder.t",
+				"src/main/java/com/tsingtec/jet/common/web/CKFinderConnectorServlet.java"
+			],
+			[
+				"ckfinder.ta",
+				"src/main/webapp/WEB-INF/tags/sys/ckfinder.tag"
+			],
+			[
+				"ckfinder.",
+				"src/main/webapp/static/ckfinder/ckfinder.js"
+			],
+			[
+				"ckfinder.html",
+				"src/main/webapp/static/ckfinder/ckfinder.html"
+			],
+			[
+				"ck",
+				"src/main/webapp/WEB-INF/ckfinder.xml"
+			],
+			[
+				"ckfin",
+				"src/main/webapp/static/ckfinder/ckfinder.js"
+			],
+			[
+				"ckfind",
+				"src/main/webapp/static/ckfinder/ckfinder.html"
+			],
+			[
+				"goodsshelvesproductreldao",
+				"src/main/resources/mappings/house/publish/GoodsshelvesProductRelDao.xml"
+			],
+			[
+				"productformaudit",
+				"src/main/webapp/WEB-INF/views/house/product/productFormAudit.jsp"
+			],
+			[
+				"",
+				".gitignore"
+			],
+			[
+				"goodsshelvesproductreldao.x",
+				"src/main/resources/mappings/house/publish/GoodsshelvesProductRelDao.xml"
+			],
+			[
+				"goodsshelvesproductrelservice",
+				"src/main/java/com/tsinglab/house/Publish/service/GoodsshelvesProductRelService.java"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 400.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 484.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 514.0,
+	"status_bar_visible": false,
+	"template_settings":
+	{
+	}
+}
