@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/local/bin/node /Users/qinshen/.yarn/bin/yarn.js upgrade
+  /usr/local/bin/node /Users/qinshen/.yarn/bin/yarn.js add　global husky lint-staged prettier
 
 PATH: 
   /Users/qinshen/.yarn/bin:/usr/local/sbin:/Users/qinshen/git/tsingo/bin:/Users/qinshen/git/linksmart/bin:/Users/qinshen/git/gogogo/bin:/Users/qinshen/go/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/aria2/bin:/usr/local/git/bin:/usr/local/mysql/bin:/Users/qinshen/git/dev-tools/redis-unstable/src:/Users/qinshen/git/tsingson/bin:/Users/qinshen/git/dev-tools/mongodb/bin:/Users/qinshen/git/linksmart/bin:/usr/local/bin/npm:/usr/local/bin/node:/usr/local/go/bin:/Applications/Postgres.app/Contents/Versions/latest/bin
@@ -16,7 +16,7 @@ Platform:
 npm manifest: 
   {
     "name": "aor-postgrest-client",
-    "version": "0.1.1",
+    "version": "0.1.0",
     "description": "A postgrest client for admin-on-rest",
     "main": "lib/index.js",
     "scripts": {
@@ -2548,11 +2548,14 @@ Lockfile:
     resolved "http://registry.npm.taobao.org/wrappy/download/wrappy-1.0.2.tgz#b5243d8f3ec1aa35f1364605bc0d1036e30ab69f"
 
 Trace: 
-  Error: Couldn't find any versions for "babel-cli" that matches "^7.0.0"
+  Error: Command "add　global" not found.
       at new MessageError (/Users/qinshen/.yarn/lib/cli.js:186:110)
-      at Function.<anonymous> (/Users/qinshen/.yarn/lib/cli.js:51424:13)
+      at /Users/qinshen/.yarn/lib/cli.js:87088:17
       at Generator.next (<anonymous>)
       at step (/Users/qinshen/.yarn/lib/cli.js:98:30)
-      at /Users/qinshen/.yarn/lib/cli.js:109:13
-      at <anonymous>
-      at process._tickCallback (internal/process/next_tick.js:160:7)
+      at /Users/qinshen/.yarn/lib/cli.js:116:14
+      at new Promise (<anonymous>)
+      at new F (/Users/qinshen/.yarn/lib/cli.js:23448:28)
+      at /Users/qinshen/.yarn/lib/cli.js:95:12
+      at runCommand (/Users/qinshen/.yarn/lib/cli.js:87093:22)
+      at Object.<anonymous> (/Users/qinshen/.yarn/lib/cli.js:87193:14)
