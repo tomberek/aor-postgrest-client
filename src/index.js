@@ -25,6 +25,35 @@ import {
  * DELETE       => DELETE http://my.api.url/posts?id=eq.123
  */
 export default (apiUrl, httpClient = fetchJson) => {
+    const convertFilters = (filters) => {
+        let rest = {};
+
+        Object.keys(filters).map(function (key) {
+            switch (typeof filters[key]) {
+                case 'string':
+                    rest[key]='ilike.*' + filters[key].replace(/:/,'') + '*';
+                    break;
+
+                case 'boolean':
+                    rest[key]='is.' + filters[key];
+                    break;
+
+                case 'undefined':
+                    rest[key]='is.null';
+                    break;
+
+                case 'number':
+                    rest[key]='eq.' + filters[key];
+                    break;
+
+                default:
+                    rest[key]='ilike.*' + filters[key].toString().replace(/:/,'') + '*';
+                    break;
+            }
+        });
+        return rest;
+    }
+
     /**
      * @param {String} type One of the constants appearing at the top if this file, e.g. 'UPDATE'
      * @param {String} resource Name of the resource to fetch, e.g. 'posts'
@@ -45,12 +74,12 @@ export default (apiUrl, httpClient = fetchJson) => {
             const { field, order } = params.sort;
 			options.headers.set('Range-Unit','items');
 			options.headers.set('Range',((page-1)*perPage) + '-' + ((page * perPage) -1)   );
+			options.headers.set('Prefer','count=exact');
 			const pf = params.filter;
-			Object.keys(pf).map(function (b){pf[b]='ilike.' + pf[b].replace(/:/,'') + '%' })
             let query = {
                 order: field + '.' +  order.toLowerCase(),
             };
-			Object.assign(query,pf)
+			Object.assign(query, convertFilters(params.filter));
             url = `${apiUrl}/${resource}?${queryParameters(query)}`;
             break;
         }
@@ -62,8 +91,13 @@ export default (apiUrl, httpClient = fetchJson) => {
             break;
         }
         case GET_MANY_REFERENCE: {
-			let query={}
-			query[params.target]=params.id;
+            const filters = {};
+            const { field, order } = params.sort;
+			filters[params.target] = params.id;
+            let query = {
+                order: field + '.' +  order.toLowerCase(),
+            };
+			Object.assign(query, convertFilters(filters));
             url = `${apiUrl}/${resource}?${queryParameters(query)}`;
             break;
         }
@@ -99,6 +133,7 @@ export default (apiUrl, httpClient = fetchJson) => {
         const { headers, json } = response;
         switch (type) {
         case GET_LIST:
+        case GET_MANY_REFERENCE:
             if (!headers.has('content-range')) {
                 throw new Error('The Content-Range header is missing in the HTTP Response. The simple REST client expects responses for lists of resources to contain this header with the total number of results to build the pagination. If you are using CORS, did you declare Content-Range in the Access-Control-Expose-Headers header?');
             }
@@ -112,7 +147,7 @@ export default (apiUrl, httpClient = fetchJson) => {
         case UPDATE:
             return { ...params.data, id: params.id };
         default:
-            return json;
+            return { data: json };
         }
     };
 
