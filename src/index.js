@@ -143,9 +143,9 @@ export default (apiUrl, httpClient = fetchJson) => {
                 total: parseInt(headers.get('content-range').split('/').pop(), 10) || maxInPage,
             };
         case CREATE:
-            return { ...params.data, id: json.id };
+            return { data:params.data, id: json.id };
         case UPDATE:
-            return { ...params.data, id: params.id };
+            return { data:params.data, id: params.id };
         default:
             return { data: json };
         }
