@@ -7,6 +7,7 @@ import {
     CREATE,
     UPDATE,
     DELETE,
+    DELETE_MANY,
 } from 'admin-on-rest/lib/rest/types';
 
 /**
@@ -114,6 +115,10 @@ export default (apiUrl, httpClient = fetchJson) => {
             break;
         case DELETE:
             url = `${apiUrl}/${resource}?id=eq.${params.id}`;
+            options.method = 'DELETE';
+            break;
+        case DELETE_MANY:
+            url = `${apiUrl}/${resource}?id=in.${params.ids.join(',')}`;
             options.method = 'DELETE';
             break;
         default:
