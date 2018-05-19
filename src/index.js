@@ -62,10 +62,6 @@ export default (apiUrl, httpClient = fetchJson) => {
      * @returns {Object} { url, options } The HTTP request parameters
      */
     const convertRESTRequestToHTTP = (type, resource, params) => {
-		console.log(type)
-		console.log(params)
-		console.log(params.filter)
-		console.log(resource)
         let url = '';
         const options = {};
 		options.headers = new Headers();
