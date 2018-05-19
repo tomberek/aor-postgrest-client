@@ -1,4 +1,4 @@
-import { queryParameters, fetchJson } from 'admin-on-rest/lib/util/fetch';
+import { queryParameters, fetchJson } from 'ra-core/lib/util/fetch';
 import {
     GET_LIST,
     GET_ONE,
@@ -8,7 +8,7 @@ import {
     UPDATE,
     DELETE,
     DELETE_MANY,
-} from 'admin-on-rest/lib/rest/types';
+} from 'react-admin';
 
 /**
  * Maps admin-on-rest queries to a postgrest API
@@ -84,9 +84,10 @@ export default (apiUrl, httpClient = fetchJson) => {
             url = `${apiUrl}/${resource}?${queryParameters(query)}`;
             break;
         }
-        case GET_ONE:
+        case GET_ONE: {
             url = `${apiUrl}/${resource}?id=eq.${params.id}`;
             break;
+        }
         case GET_MANY: {
             url = `${apiUrl}/${resource}?id=in.${params.ids.join(',')}`;
             break;
@@ -102,25 +103,29 @@ export default (apiUrl, httpClient = fetchJson) => {
             url = `${apiUrl}/${resource}?${queryParameters(query)}`;
             break;
         }
-        case UPDATE:
+        case UPDATE: {
             url = `${apiUrl}/${resource}?id=eq.${params.id}`;
             options.method = 'PATCH';
             options.body = JSON.stringify(params.data);
             break;
-        case CREATE:
+        }
+        case CREATE: {
             url = `${apiUrl}/${resource}`;
 			options.headers.set('Prefer','return=representation');
             options.method = 'POST';
             options.body = JSON.stringify(params.data);
             break;
-        case DELETE:
+        }
+        case DELETE: {
             url = `${apiUrl}/${resource}?id=eq.${params.id}`;
             options.method = 'DELETE';
             break;
-        case DELETE_MANY:
-            url = `${apiUrl}/${resource}?id=in.${params.ids.join(',')}`;
+        }
+        case DELETE_MANY: {
+            url = `${apiUrl}/${resource}?id=in.(${params.ids.join(',')})`;
             options.method = 'DELETE';
             break;
+        }
         default:
             throw new Error(`Unsupported fetch action type ${type}`);
         }
@@ -151,6 +156,10 @@ export default (apiUrl, httpClient = fetchJson) => {
             return { data:params.data, id: json.id };
         case UPDATE:
             return { data:params.data, id: params.id };
+        case DELETE:
+            return { data:[],id: params.id };
+        case DELETE_MANY:
+            return { data:[],id: params.id };
         default:
             return { data: json };
         }
