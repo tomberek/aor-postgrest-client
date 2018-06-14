@@ -47,6 +47,12 @@ export default (apiUrl, httpClient = fetchJson) => {
                     rest[key]='eq.' + filters[key];
                     break;
 
+                case 'object':
+                    Object.keys(filters[key]).map( (val) => (
+                      rest[`${key}->>${val}`]=`ilike.*${filters[key][val]}*`
+                    ));
+                    break;
+
                 default:
                     rest[key]='ilike.*' + filters[key].toString().replace(/:/,'') + '*';
                     break;
