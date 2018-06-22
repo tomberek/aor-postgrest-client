@@ -48,9 +48,13 @@ export default (apiUrl, httpClient = fetchJson) => {
                     break;
 
                 case 'object':
-                    Object.keys(filters[key]).map( (val) => (
-                      rest[`${key}->>${val}`]=`ilike.*${filters[key][val]}*`
-                    ));
+                    if (filters[key].constructor === Array) {
+                      rest[key]='cs.{' + filters[key].toString().replace(/:/,'') + '}';
+                    } else {
+                      Object.keys(filters[key]).map( (val) => (
+                        rest[`${key}->>${val}`]=`ilike.*${filters[key][val]}*`
+                      ));
+                    }
                     break;
 
                 default:
