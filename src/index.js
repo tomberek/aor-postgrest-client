@@ -87,6 +87,7 @@ export default (apiUrl, httpClient = fetchJson) => {
             break;
         }
         case GET_ONE: {
+			options.headers.set('Accept','application/vnd.pgrst.object+json');
             url = `${apiUrl}/${resource}?id=eq.${params.id}`;
             break;
         }
@@ -113,6 +114,7 @@ export default (apiUrl, httpClient = fetchJson) => {
         }
         case CREATE: {
             url = `${apiUrl}/${resource}`;
+			options.headers.set('Accept','application/vnd.pgrst.object+json');
 			options.headers.set('Prefer','return=representation');
             options.method = 'POST';
             options.body = JSON.stringify(params.data);
@@ -162,6 +164,8 @@ export default (apiUrl, httpClient = fetchJson) => {
             return { data:[],id: params.id };
         case DELETE_MANY:
             return { data:[],id: params.id };
+        case GET_ONE:
+            return { data:json,id: params.id };
         default:
             return { data: json };
         }
