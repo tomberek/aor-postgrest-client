@@ -96,7 +96,7 @@ export default (apiUrl, httpClient = fetchJson) => {
             break;
         }
         case GET_MANY: {
-            url = `${apiUrl}/${resource}?id=in.${params.ids.join(',')}`;
+            url = `${apiUrl}/${resource}?id=in.(${params.ids.join(',')})`;
             break;
         }
         case GET_MANY_REFERENCE: {
