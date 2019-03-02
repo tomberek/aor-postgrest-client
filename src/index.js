@@ -20,7 +20,7 @@ import {
  *              => GET http://my.api.url/posts/2
  * GET_LIST     => GET http://my.api.url/posts?order=title.asc
  * GET_ONE      => GET http://my.api.url/posts?id=eq.123
- * GET_MANY     => GET http://my.api.url/posts?id=in.123,456,789
+ * GET_MANY     => GET http://my.api.url/posts?id=in.(123,456,789)
  * UPDATE       => PATCH http://my.api.url/posts?id=eq.123
  * CREATE       => POST http://my.api.url/posts
  * DELETE       => DELETE http://my.api.url/posts?id=eq.123
@@ -96,7 +96,7 @@ export default (apiUrl, httpClient = fetchJson) => {
             break;
         }
         case GET_MANY: {
-            url = `${apiUrl}/${resource}?id=in.${params.ids.join(',')}`;
+            url = `${apiUrl}/${resource}?id=in.(${params.ids.join(',')})`;
             break;
         }
         case GET_MANY_REFERENCE: {
